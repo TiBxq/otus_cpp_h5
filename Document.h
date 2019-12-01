@@ -11,6 +11,11 @@ public:
 
     void RemoveShape(Shape* shape);
 
+    void ImportFromSVG();
+    void ImportFromEPS();
+    void ExportToSVG();
+    void ExportToEPS();
+
     void Draw() const;
 
     ~Document();

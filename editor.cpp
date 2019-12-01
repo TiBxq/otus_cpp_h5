@@ -3,20 +3,19 @@
 //TODO: forward declaration?
 //TODO: File Manager
 
-
 void OnDraw()
 {
     EditorManager::Instance().Draw();
 }
 
-void OnImportPressed()
+void OnImportPressed(FileType type)
 {
-    EditorManager::Instance().ImportDocument();
+    EditorManager::Instance().ImportDocument(type);
 }
 
-void OnExportPressed()
+void OnExportPressed(FileType type)
 {
-    EditorManager::Instance().ExportDocument();
+    EditorManager::Instance().ExportDocument(type);
 }
 
 int main(/*int argc, char const *argv[]*/)

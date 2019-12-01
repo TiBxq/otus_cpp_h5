@@ -2,6 +2,7 @@
 #include <vector>
 
 #include "Document.h"
+#include "File.h"
 
 class EditorManager
 {
@@ -16,8 +17,9 @@ public:
     }
 
     void CreateDocument();
-    void ImportDocument();
-    void ExportDocument();
+
+    void ImportDocument(FileType type);
+    void ExportDocument(FileType type);
 
     void Draw() const;
 
