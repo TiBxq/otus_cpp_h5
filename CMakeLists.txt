@@ -6,7 +6,7 @@ project(editor VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
-add_executable(editor editor.cpp)
+add_executable(editor editor.cpp EditorManager.h EditorManager.cpp Document.h Document.cpp Shape.h Logger.h)
 add_executable(editor_test editor_test.cpp)
 
 set_target_properties(editor_test PROPERTIES
