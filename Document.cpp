@@ -12,7 +12,7 @@ void Document::AddRectangle()
 
 void Document::RemoveShape(Shape* shape)
 {
-    m_shapeList.erase(std::find(m_shapeList.begin(), m_shapeList.end(), shape));
+    //m_shapeList.erase(std::find(m_shapeList.begin(), m_shapeList.end(), shape));
 }
 
 void Document::Draw() const
