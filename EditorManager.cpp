@@ -34,15 +34,42 @@ void EditorManager::ExportDocument(FileType type)
     case FileType::SVG:
         if (m_document)
         {
-            m_document->ImportFromSVG();
+            m_document->ExportToSVG();
         }
         break;
     case FileType::EPS:
         if (m_document)
         {
-            m_document->ImportFromEPS();
+            m_document->ExportToEPS();
         }
         break;
+    }
+}
+
+void EditorManager::AddShape(ShapeType type)
+{
+    switch (type)
+    {
+    case ShapeType::Circle:
+        if (m_document)
+        {
+            m_document->AddCircle();
+        }
+        break;
+    case ShapeType::Rectangle:
+        if (m_document)
+        {
+            m_document->AddRectangle();
+        }
+        break;
+    }
+}
+
+void EditorManager::RemoveShape(Shape* shape)
+{
+    if (m_document)
+    {
+        m_document->RemoveShape(shape);
     }
 }
 

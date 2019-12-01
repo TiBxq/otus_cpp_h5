@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include "Document.h"
 #include "File.h"
 
@@ -11,9 +13,9 @@ void Document::AddRectangle()
     m_shapeList.emplace_back(new Rectangle());
 }
 
-void Document::RemoveShape(Shape*)
+void Document::RemoveShape(Shape* shape)
 {
-    //m_shapeList.erase(std::find(m_shapeList.begin(), m_shapeList.end(), shape));
+    m_shapeList.erase(std::find(m_shapeList.begin(), m_shapeList.end(), shape));
 }
 
 //TODO: file manager?

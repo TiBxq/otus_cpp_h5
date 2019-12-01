@@ -18,6 +18,16 @@ void OnExportPressed(FileType type)
     EditorManager::Instance().ExportDocument(type);
 }
 
+void OnShapeAdded(ShapeType type)
+{
+    EditorManager::Instance().AddShape(type);
+}
+
+void OnShapeRemoved(Shape* shape)
+{
+    EditorManager::Instance().RemoveShape(shape);
+}
+
 int main(/*int argc, char const *argv[]*/)
 {
     EditorManager& editor = EditorManager::Instance();

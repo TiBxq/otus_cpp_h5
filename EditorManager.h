@@ -3,6 +3,7 @@
 
 #include "Document.h"
 #include "File.h"
+#include "Shape.h"
 
 class EditorManager
 {
@@ -20,6 +21,9 @@ public:
 
     void ImportDocument(FileType type);
     void ExportDocument(FileType type);
+
+    void AddShape(ShapeType type);
+    void RemoveShape(Shape* shape);
 
     void Draw() const;
 

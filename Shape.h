@@ -2,6 +2,11 @@
 
 class File;
 
+enum class ShapeType
+{
+    Circle, Rectangle
+};
+
 class Shape
 {
 public:
