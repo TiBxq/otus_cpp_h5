@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../editor_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;editor.cpp'],['../editor__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;editor_test.cpp']]]
+  ['addcircle',['AddCircle',['../class_document.html#ae9dfba753362dcd249c23e75ac3cca91',1,'Document']]],
+  ['addrectangle',['AddRectangle',['../class_document.html#ab6ee7906dd128812de5488b7b279e030',1,'Document']]]
 ];

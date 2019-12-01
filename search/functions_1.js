@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test',['TEST',['../editor__test_8cpp.html#abe34a9a10e5c1aad57211cb6d43b0fba',1,'editor_test.cpp']]]
+  ['createdocument',['CreateDocument',['../class_editor_manager.html#a2e06e7817f0890006a34a055d8e5ef8c',1,'EditorManager']]]
 ];
