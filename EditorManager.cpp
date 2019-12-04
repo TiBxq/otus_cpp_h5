@@ -3,7 +3,6 @@
 
 void EditorManager::CreateDocument()
 {
-    //TODO: name?
     m_document = new Document();
     Logger::Instance().Write("Document created");
 }

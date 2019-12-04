@@ -1,5 +1,3 @@
-#include <algorithm>
-
 #include "Document.h"
 #include "File.h"
 
@@ -15,25 +13,19 @@ void Document::AddRectangle()
 
 void Document::RemoveShape(Shape* shape)
 {
-    m_shapeList.erase(std::find(m_shapeList.begin(), m_shapeList.end(), shape));
+
 }
 
 //TODO: file manager?
 
 void Document::ImportFromSVG(FileSVG* file)
 {
-    for (Shape* shape : m_shapeList)
-    {
-        shape->LoadFromSVG(file);
-    }
+
 }
 
 void Document::ImportFromEPS(FileEPS* file)
 {
-    for (Shape* shape : m_shapeList)
-    {
-        shape->LoadFromEPS(file);
-    }
+
 }
 
 void Document::ExportToSVG(FileSVG* file)
