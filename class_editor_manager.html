@@ -102,14 +102,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a201145bce044fecbc11a5abee8480eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e06e7817f0890006a34a055d8e5ef8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a2e06e7817f0890006a34a055d8e5ef8c">CreateDocument</a> ()</td></tr>
 <tr class="separator:a2e06e7817f0890006a34a055d8e5ef8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a9559789c14d867ab9785997aaf4d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a01a9559789c14d867ab9785997aaf4d9">RemoveDocument</a> (const <a class="el" href="class_document.html">Document</a> *)</td></tr>
+<tr class="separator:a01a9559789c14d867ab9785997aaf4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a156a5f7884c91a2972037ee7a9a3420e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a156a5f7884c91a2972037ee7a9a3420e">ImportDocument</a> (<a class="el" href="_file_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3">FileType</a> type, const std::string &amp;path)</td></tr>
 <tr class="separator:a156a5f7884c91a2972037ee7a9a3420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e647002b0484e047d3823650fb9e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a50e647002b0484e047d3823650fb9e95">ExportDocument</a> (<a class="el" href="_file_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3">FileType</a> type, const std::string &amp;path)</td></tr>
 <tr class="separator:a50e647002b0484e047d3823650fb9e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da201fadd4fbac16454655de50bd761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a2da201fadd4fbac16454655de50bd761">AddShape</a> (<a class="el" href="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345">ShapeType</a> type)</td></tr>
 <tr class="separator:a2da201fadd4fbac16454655de50bd761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43fa0275a898ed3ca8b0a9a523403d42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a43fa0275a898ed3ca8b0a9a523403d42">RemoveShape</a> (<a class="el" href="class_shape.html">Shape</a> *shape)</td></tr>
-<tr class="separator:a43fa0275a898ed3ca8b0a9a523403d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0478d3dcfa4566b547e77528953aa3be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#a0478d3dcfa4566b547e77528953aa3be">RemoveShape</a> (const <a class="el" href="class_shape.html">Shape</a> *shape)</td></tr>
+<tr class="separator:a0478d3dcfa4566b547e77528953aa3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f749ecbc2f9ca85f6dbf17c9c2767c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_editor_manager.html#ab4f749ecbc2f9ca85f6dbf17c9c2767c">Draw</a> () const </td></tr>
 <tr class="separator:ab4f749ecbc2f9ca85f6dbf17c9c2767c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -289,14 +291,38 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a43fa0275a898ed3ca8b0a9a523403d42"></a>
+<a class="anchor" id="a01a9559789c14d867ab9785997aaf4d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EditorManager::RemoveDocument </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_document.html">Document</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0478d3dcfa4566b547e77528953aa3be"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void EditorManager::RemoveShape </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shape.html">Shape</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_shape.html">Shape</a> *&#160;</td>
           <td class="paramname"><em>shape</em></td><td>)</td>
           <td></td>
         </tr>
