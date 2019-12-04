@@ -12,10 +12,10 @@ public:
     void AddCircle();
     void AddRectangle();
 
-    void RemoveShape(Shape* shape);
+    void RemoveShape(const Shape*) {}
 
-    void ImportFromSVG(FileSVG* file);
-    void ImportFromEPS(FileEPS* file);
+    void ImportFromSVG(FileSVG* file) {}
+    void ImportFromEPS(FileEPS* file) {}
     void ExportToSVG(FileSVG* file);
     void ExportToEPS(FileEPS* file);
 
@@ -24,6 +24,5 @@ public:
     ~Document();
 
 private:
-    //TODO: smart pointers?
     std::vector<Shape*> m_shapeList;
 };

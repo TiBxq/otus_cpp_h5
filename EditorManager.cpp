@@ -3,7 +3,8 @@
 
 void EditorManager::CreateDocument()
 {
-    m_document = new Document();
+    m_documentList.emplace_back(Document());
+    m_currentDocument = &m_documentList.back();
     Logger::Instance().Write("Document created");
 }
 
@@ -12,19 +13,19 @@ void EditorManager::ImportDocument(FileType type, const std::string& path )
     switch (type)
     {
     case FileType::SVG:
-        if (m_document)
+        if (m_currentDocument)
         {
             FileSVG* file = new FileSVG();
             file->Open(path);
-            m_document->ImportFromSVG(file);
+            m_currentDocument->ImportFromSVG(file);
         }
         break;
     case FileType::EPS:
-        if (m_document)
+        if (m_currentDocument)
         {
             FileEPS* file = new FileEPS();
             file->Open(path);
-            m_document->ImportFromEPS(file);
+            m_currentDocument->ImportFromEPS(file);
         }
         break;
     }
@@ -35,18 +36,18 @@ void EditorManager::ExportDocument(FileType type, const std::string& path)
     switch (type)
     {
     case FileType::SVG:
-        if (m_document)
+        if (m_currentDocument)
         {
             FileSVG* file = new FileSVG();
-            m_document->ExportToSVG(file);
+            m_currentDocument->ExportToSVG(file);
             file->SaveTo(path);
         }
         break;
     case FileType::EPS:
-        if (m_document)
+        if (m_currentDocument)
         {
             FileEPS* file = new FileEPS();
-            m_document->ExportToEPS(file);
+            m_currentDocument->ExportToEPS(file);
             file->SaveTo(path);
         }
         break;
@@ -58,38 +59,33 @@ void EditorManager::AddShape(ShapeType type)
     switch (type)
     {
     case ShapeType::Circle:
-        if (m_document)
+        if (m_currentDocument)
         {
-            m_document->AddCircle();
+            m_currentDocument->AddCircle();
         }
         break;
     case ShapeType::Rectangle:
-        if (m_document)
+        if (m_currentDocument)
         {
-            m_document->AddRectangle();
+            m_currentDocument->AddRectangle();
         }
         break;
     }
 }
 
-void EditorManager::RemoveShape(Shape* shape)
+void EditorManager::RemoveShape(const Shape* shape)
 {
-    if (m_document)
+    if (m_currentDocument)
     {
-        m_document->RemoveShape(shape);
+        m_currentDocument->RemoveShape(shape);
     }
 }
 
 void EditorManager::Draw() const
 {
-    if (m_document)
+    if (m_currentDocument)
     {
-        m_document->Draw();
+        m_currentDocument->Draw();
         Logger::Instance().Write("Draw");
     }
-}
-
-EditorManager::~EditorManager()
-{
-    delete m_document;
 }

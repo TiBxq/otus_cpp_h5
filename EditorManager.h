@@ -18,19 +18,19 @@ public:
     }
 
     void CreateDocument();
+    void RemoveDocument(const Document*) {}
 
     void ImportDocument(FileType type, const std::string& path);
     void ExportDocument(FileType type, const std::string& path);
 
     void AddShape(ShapeType type);
-    void RemoveShape(Shape* shape);
+    void RemoveShape(const Shape* shape);
 
     void Draw() const;
 
 private:
-    EditorManager() : m_document(nullptr) {}
-    ~EditorManager();
+    EditorManager() : m_currentDocument(nullptr) {}
 
-    //TODO: more documents? smart pointer?
-    Document* m_document;
+    Document* m_currentDocument;
+    std::vector<Document> m_documentList;
 };

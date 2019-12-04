@@ -11,23 +11,6 @@ void Document::AddRectangle()
     m_shapeList.emplace_back(new Rectangle());
 }
 
-void Document::RemoveShape(Shape* shape)
-{
-
-}
-
-//TODO: file manager?
-
-void Document::ImportFromSVG(FileSVG* file)
-{
-
-}
-
-void Document::ImportFromEPS(FileEPS* file)
-{
-
-}
-
 void Document::ExportToSVG(FileSVG* file)
 {
     for (Shape* shape : m_shapeList)
