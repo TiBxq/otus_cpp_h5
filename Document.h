@@ -14,8 +14,8 @@ public:
 
     void RemoveShape(const Shape*) {}
 
-    void ImportFromSVG(FileSVG* file) {}
-    void ImportFromEPS(FileEPS* file) {}
+    void ImportFromSVG(FileSVG*) {}
+    void ImportFromEPS(FileEPS*) {}
     void ExportToSVG(FileSVG* file);
     void ExportToEPS(FileEPS* file);
 
