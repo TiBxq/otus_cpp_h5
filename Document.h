@@ -3,6 +3,9 @@
 
 #include "Shape.h"
 
+class FileSVG;
+class FileEPS;
+
 class Document
 {
 public:
@@ -11,10 +14,10 @@ public:
 
     void RemoveShape(Shape* shape);
 
-    void ImportFromSVG();
-    void ImportFromEPS();
-    void ExportToSVG();
-    void ExportToEPS();
+    void ImportFromSVG(FileSVG* file);
+    void ImportFromEPS(FileEPS* file);
+    void ExportToSVG(FileSVG* file);
+    void ExportToEPS(FileEPS* file);
 
     void Draw() const;
 

@@ -20,35 +20,35 @@ void Document::RemoveShape(Shape* shape)
 
 //TODO: file manager?
 
-void Document::ImportFromSVG()
+void Document::ImportFromSVG(FileSVG* file)
 {
     for (Shape* shape : m_shapeList)
     {
-        shape->LoadFromSVG(new FileSVG());
+        shape->LoadFromSVG(file);
     }
 }
 
-void Document::ImportFromEPS()
+void Document::ImportFromEPS(FileEPS* file)
 {
     for (Shape* shape : m_shapeList)
     {
-        shape->LoadFromEPS(new FileEPS());
+        shape->LoadFromEPS(file);
     }
 }
 
-void Document::ExportToSVG()
+void Document::ExportToSVG(FileSVG* file)
 {
     for (Shape* shape : m_shapeList)
     {
-        shape->SaveToSVG(new FileSVG());
+        shape->SaveToSVG(file);
     }
 }
 
-void Document::ExportToEPS()
+void Document::ExportToEPS(FileEPS* file)
 {
     for (Shape* shape : m_shapeList)
     {
-        shape->SaveToEPS(new FileEPS());
+        shape->SaveToEPS(file);
     }
 }
 

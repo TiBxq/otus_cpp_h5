@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 class Shape;
 
@@ -14,6 +15,9 @@ public:
 
     virtual void Save(Shape* shape) = 0;
     virtual void Load(Shape* shape) = 0;
+
+    virtual void Open(const std::string&) {}
+    virtual void SaveTo(const std::string&) {}
 };
 
 class FileSVG : public File

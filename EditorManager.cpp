@@ -8,39 +8,47 @@ void EditorManager::CreateDocument()
     Logger::Instance().Write("Document created");
 }
 
-void EditorManager::ImportDocument(FileType type)
+void EditorManager::ImportDocument(FileType type, const std::string& path )
 {
     switch (type)
     {
     case FileType::SVG:
         if (m_document)
         {
-            m_document->ImportFromSVG();
+            FileSVG* file = new FileSVG();
+            file->Open(path);
+            m_document->ImportFromSVG(file);
         }
         break;
     case FileType::EPS:
         if (m_document)
         {
-            m_document->ImportFromEPS();
+            FileEPS* file = new FileEPS();
+            file->Open(path);
+            m_document->ImportFromEPS(file);
         }
         break;
     }
 }
 
-void EditorManager::ExportDocument(FileType type)
+void EditorManager::ExportDocument(FileType type, const std::string& path)
 {
     switch (type)
     {
     case FileType::SVG:
         if (m_document)
         {
-            m_document->ExportToSVG();
+            FileSVG* file = new FileSVG();
+            m_document->ExportToSVG(file);
+            file->SaveTo(path);
         }
         break;
     case FileType::EPS:
         if (m_document)
         {
-            m_document->ExportToEPS();
+            FileEPS* file = new FileEPS();
+            m_document->ExportToEPS(file);
+            file->SaveTo(path);
         }
         break;
     }

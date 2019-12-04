@@ -19,8 +19,8 @@ public:
 
     void CreateDocument();
 
-    void ImportDocument(FileType type);
-    void ExportDocument(FileType type);
+    void ImportDocument(FileType type, const std::string& path);
+    void ExportDocument(FileType type, const std::string& path);
 
     void AddShape(ShapeType type);
     void RemoveShape(Shape* shape);

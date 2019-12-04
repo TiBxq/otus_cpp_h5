@@ -8,14 +8,14 @@ void OnDraw()
     EditorManager::Instance().Draw();
 }
 
-void OnImportPressed(FileType type)
+void OnImportPressed(FileType type, const std::string& path)
 {
-    EditorManager::Instance().ImportDocument(type);
+    EditorManager::Instance().ImportDocument(type, path);
 }
 
-void OnExportPressed(FileType type)
+void OnExportPressed(FileType type, const std::string& path )
 {
-    EditorManager::Instance().ExportDocument(type);
+    EditorManager::Instance().ExportDocument(type, path);
 }
 
 void OnShapeAdded(ShapeType type)
