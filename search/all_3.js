@@ -6,7 +6,7 @@ var searchData=
   ['editormanager_2ecpp',['EditorManager.cpp',['../_editor_manager_8cpp.html',1,'']]],
   ['editormanager_2eh',['EditorManager.h',['../_editor_manager_8h.html',1,'']]],
   ['eps',['EPS',['../_file_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3ac2c027d8c62500300145c3043546d4c6',1,'File.h']]],
-  ['exportdocument',['ExportDocument',['../class_editor_manager.html#a9a152445b1ea29179ed978aae2199aad',1,'EditorManager']]],
-  ['exporttoeps',['ExportToEPS',['../class_document.html#a983f8feb149feae1a3f8a3bc2266b06e',1,'Document']]],
-  ['exporttosvg',['ExportToSVG',['../class_document.html#a568f69c4c6ff1a6fb8a10ef601c18cb6',1,'Document']]]
+  ['exportdocument',['ExportDocument',['../class_editor_manager.html#a50e647002b0484e047d3823650fb9e95',1,'EditorManager']]],
+  ['exporttoeps',['ExportToEPS',['../class_document.html#ac717fdd5d5ad002fd1053b78ab6fd212',1,'Document']]],
+  ['exporttosvg',['ExportToSVG',['../class_document.html#abc6b679b3605e70818912aa2853415ec',1,'Document']]]
 ];
