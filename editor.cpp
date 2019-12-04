@@ -1,8 +1,5 @@
 #include "EditorManager.h"
 
-//TODO: forward declaration?
-//TODO: File Manager
-
 void OnDraw()
 {
     EditorManager::Instance().Draw();
@@ -33,7 +30,11 @@ int main(/*int argc, char const *argv[]*/)
     EditorManager& editor = EditorManager::Instance();
 
     editor.CreateDocument();
+    OnImportPressed(FileType::SVG, "myFile.svg");
+    OnShapeAdded(ShapeType::Circle);
+    OnShapeAdded(ShapeType::Rectangle);
     OnDraw();
+    OnExportPressed(FileType::EPS, "myFile.eps");
 
     return 0;
 }

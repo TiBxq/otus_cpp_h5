@@ -86,6 +86,5 @@ void EditorManager::Draw() const
     if (m_currentDocument)
     {
         m_currentDocument->Draw();
-        Logger::Instance().Write("Draw");
     }
 }

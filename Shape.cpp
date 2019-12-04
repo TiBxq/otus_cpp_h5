@@ -2,8 +2,6 @@
 #include "File.h"
 #include "Logger.h"
 
-//TODO: different file types?
-
 void Circle::SaveToSVG(FileSVG*)
 {
     Logger::Instance().Write("Circle saved to SVG");
@@ -24,6 +22,11 @@ void Circle::LoadFromEPS(FileEPS*)
     Logger::Instance().Write("Circle loaded from EPS");
 }
 
+void Circle::Draw() const
+{
+    Logger::Instance().Write("Circle drawn");
+}
+
 void Rectangle::SaveToSVG(FileSVG*)
 {
     Logger::Instance().Write("Rectangle saved to SVG");
@@ -42,4 +45,9 @@ void Rectangle::LoadFromSVG(FileSVG*)
 void Rectangle::LoadFromEPS(FileEPS*)
 {
     Logger::Instance().Write("Rectangle loaded from EPS");
+}
+
+void Rectangle::Draw() const
+{
+    Logger::Instance().Write("Rectangle drawn");
 }

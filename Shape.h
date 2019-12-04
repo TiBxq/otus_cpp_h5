@@ -24,7 +24,7 @@ public:
 class Circle : public Shape
 {
 public:
-    virtual void Draw() const override {}
+    virtual void Draw() const override;
 
     virtual void SaveToSVG(FileSVG* file) override;
     virtual void SaveToEPS(FileEPS* file) override;
@@ -35,7 +35,7 @@ public:
 class Rectangle : public Shape
 {
 public:
-    virtual void Draw() const override {}
+    virtual void Draw() const override;
 
     virtual void SaveToSVG(FileSVG* file) override;
     virtual void SaveToEPS(FileEPS* file) override;
