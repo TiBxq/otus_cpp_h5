@@ -11,6 +11,21 @@ void Document::AddRectangle()
     m_shapeList.emplace_back(new Rectangle());
 }
 
+Shape* Document::GetShapeByCoord(int, int)
+{
+    return nullptr;
+}
+
+void Document::SelectShape(Shape* shape)
+{
+    m_selectedShape = shape;
+}
+
+void Document::UnselectShape()
+{
+    m_selectedShape = nullptr;
+}
+
 void Document::ExportToSVG(FileSVG* file)
 {
     for (Shape* shape : m_shapeList)

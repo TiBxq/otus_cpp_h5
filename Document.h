@@ -13,6 +13,12 @@ public:
     void AddRectangle();
 
     void RemoveShape(const Shape*) {}
+    
+    Shape* GetShapeByCoord(int, int);
+    Shape* GetSelectedShape() { return m_selectedShape; }
+
+    void SelectShape(Shape* shape);
+    void UnselectShape();
 
     void ImportFromSVG(FileSVG*) {}
     void ImportFromEPS(FileEPS*) {}
@@ -25,4 +31,5 @@ public:
 
 private:
     std::vector<Shape*> m_shapeList;
+    Shape* m_selectedShape = nullptr;
 };

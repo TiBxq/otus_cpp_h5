@@ -20,9 +20,19 @@ void OnShapeAdded(ShapeType type)
     EditorManager::Instance().AddShape(type);
 }
 
-void OnShapeRemoved(Shape* shape)
+void OnShapeSelected(int x, int y)
 {
-    EditorManager::Instance().RemoveShape(shape);
+    EditorManager::Instance().SelectShape(x, y);
+}
+
+void OnSelectedShapeRemoved()
+{
+    EditorManager::Instance().RemoveSelectedShape();
+}
+
+void OnCurrentDocumentRemoved()
+{
+    EditorManager::Instance().RemoveCurrentDocument();
 }
 
 int main(/*int argc, char const *argv[]*/)

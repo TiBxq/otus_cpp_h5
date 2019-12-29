@@ -8,6 +8,22 @@ void EditorManager::CreateDocument()
     Logger::Instance().Write("Document created");
 }
 
+void EditorManager::RemoveCurrentDocument()
+{
+    if (m_currentDocument)
+    {
+        RemoveDocument(m_currentDocument);
+        if (!m_documentList.empty())
+        {
+            m_currentDocument = &m_documentList.back();
+        }
+        else
+        {
+            m_currentDocument = nullptr;
+        }
+    }
+}
+
 void EditorManager::ImportDocument(FileType type, const std::string& path )
 {
     switch (type)
@@ -73,12 +89,38 @@ void EditorManager::AddShape(ShapeType type)
     }
 }
 
-void EditorManager::RemoveShape(const Shape* shape)
+void EditorManager::RemoveSelectedShape()
 {
     if (m_currentDocument)
     {
-        m_currentDocument->RemoveShape(shape);
+        Shape* selected = m_currentDocument->GetSelectedShape();
+        if (selected)
+        {
+            m_currentDocument->RemoveShape(selected);
+            m_currentDocument->UnselectShape();
+        }
     }
+}
+
+void EditorManager::SelectShape(int x, int y)
+{
+    if (m_currentDocument)
+    {
+        Shape* selected = m_currentDocument->GetShapeByCoord(x, y);
+        if (selected)
+        {
+            m_currentDocument->SelectShape(selected);
+        }
+    }
+}
+
+Shape* EditorManager::GetSelectedShape()
+{
+    if (m_currentDocument)
+    {
+        return m_currentDocument->GetSelectedShape();
+    }
+    return nullptr;
 }
 
 void EditorManager::Draw() const
