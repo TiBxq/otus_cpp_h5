@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write',['Write',['../class_logger.html#a3d8719a2f26678515d108fba05f287ee',1,'Logger']]]
+  ['test',['TEST',['../editor__test_8cpp.html#abe34a9a10e5c1aad57211cb6d43b0fba',1,'editor_test.cpp']]]
 ];

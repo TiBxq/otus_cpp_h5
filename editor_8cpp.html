@@ -110,8 +110,12 @@ Functions</h2></td></tr>
 <tr class="separator:a586a5cb92e12e2d53859284b10a645e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a2856dc6ba8fbdd9e4ecddc5c3e165c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#a3a2856dc6ba8fbdd9e4ecddc5c3e165c">OnShapeAdded</a> (<a class="el" href="_shape_8h.html#a5a4538eeab397888d88a4eefcc5a1345">ShapeType</a> type)</td></tr>
 <tr class="separator:a3a2856dc6ba8fbdd9e4ecddc5c3e165c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaaf4c1a2e549b1ff4e764828a518f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#acaaf4c1a2e549b1ff4e764828a518f6f">OnShapeRemoved</a> (<a class="el" href="class_shape.html">Shape</a> *shape)</td></tr>
-<tr class="separator:acaaf4c1a2e549b1ff4e764828a518f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03ad725c4fde09672b84f8657d30a95a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#a03ad725c4fde09672b84f8657d30a95a">OnShapeSelected</a> (int x, int y)</td></tr>
+<tr class="separator:a03ad725c4fde09672b84f8657d30a95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466d9fb737fa259ed9f065f7d67044aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#a466d9fb737fa259ed9f065f7d67044aa">OnSelectedShapeRemoved</a> ()</td></tr>
+<tr class="separator:a466d9fb737fa259ed9f065f7d67044aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5f364e354ed7773318c6e07d6f9cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#ada5f364e354ed7773318c6e07d6f9cf8">OnCurrentDocumentRemoved</a> ()</td></tr>
+<tr class="separator:ada5f364e354ed7773318c6e07d6f9cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="editor_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -122,6 +126,21 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ada5f364e354ed7773318c6e07d6f9cf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnCurrentDocumentRemoved </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -198,6 +217,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a466d9fb737fa259ed9f065f7d67044aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnSelectedShapeRemoved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3a2856dc6ba8fbdd9e4ecddc5c3e165c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -214,16 +248,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acaaf4c1a2e549b1ff4e764828a518f6f"></a>
+<a class="anchor" id="a03ad725c4fde09672b84f8657d30a95a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void OnShapeRemoved </td>
+          <td class="memname">void OnShapeSelected </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_shape.html">Shape</a> *&#160;</td>
-          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
