@@ -20,8 +20,8 @@ public:
     void SelectShape(Shape* shape);
     void UnselectShape();
 
-    void ImportFromSVG(FileSVG*) {}
-    void ImportFromEPS(FileEPS*) {}
+    void ImportFromSVG(const FileSVG&) {}
+    void ImportFromEPS(const FileEPS&) {}
     void ExportToSVG(FileSVG* file);
     void ExportToEPS(FileEPS* file);
 

@@ -31,16 +31,16 @@ void EditorManager::ImportDocument(FileType type, const std::string& path )
     case FileType::SVG:
         if (m_currentDocument)
         {
-            FileSVG* file = new FileSVG();
-            file->Open(path);
+            FileSVG file;
+            file.Open(path);
             m_currentDocument->ImportFromSVG(file);
         }
         break;
     case FileType::EPS:
         if (m_currentDocument)
         {
-            FileEPS* file = new FileEPS();
-            file->Open(path);
+            FileEPS file;
+            file.Open(path);
             m_currentDocument->ImportFromEPS(file);
         }
         break;
@@ -57,6 +57,7 @@ void EditorManager::ExportDocument(FileType type, const std::string& path)
             FileSVG* file = new FileSVG();
             m_currentDocument->ExportToSVG(file);
             file->SaveTo(path);
+            delete file;
         }
         break;
     case FileType::EPS:
@@ -65,6 +66,7 @@ void EditorManager::ExportDocument(FileType type, const std::string& path)
             FileEPS* file = new FileEPS();
             m_currentDocument->ExportToEPS(file);
             file->SaveTo(path);
+            delete file;
         }
         break;
     }
